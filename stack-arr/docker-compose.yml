@@ -10,7 +10,8 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /docker/appdata/sabnzbd:/config
-      - /mnt/share/data/usenet:/data/usenet:rw
+#      - /mnt/share/data/usenet:/data/usenet:rw
+      - /mnt/media/downloading/usenet:/data/usenet:rw
     ports:
       - 8080:8080
     restart: unless-stopped
@@ -110,6 +111,8 @@ services:
 #      - /mnt/usb/data/media/movies:/data/usb-movies
       - /mnt/media/tv:/data/tvshows
       - /mnt/media/movies:/data/movies
+      - /mnt/media/kids-movies:/data/kids-movies
+      - /mnt/media/kids-tv:/data/kids-tv
     restart: unless-stopped
     environment:
       - PUID=1000
