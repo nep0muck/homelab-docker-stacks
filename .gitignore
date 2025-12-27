@@ -1,0 +1,15 @@
+# Docker Zeug
+*.log
+docker-data/
+volumes/
+*.pid
+
+# Env / Secrets
+.env
+.env.*
+!*.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
